@@ -8,7 +8,85 @@ h1 {
   font-weight: normal;
   font-style: normal; }
 
+.nav {
+  text-transform: uppercase; }
+  .nav__list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    list-style: none; }
+  .nav__item {
+    padding: 8px 24px;
+    margin: 0 38px;
+    color: white; }
+  .nav .nav__item_active {
+    background: #fff;
+    opacity: 0.1;
+    border-radius: 8px;
+    color: black; }
+  .nav__link {
+    color: white;
+    text-decoration: none;
+    -webkit-transition: color 300ms;
+    transition: color 300ms; }
+    .nav__link:hover {
+      color: #9fadc2; }
+
+.header {
+  height: 700px;
+  background-image: url(../images/upd/header-new.png);
+  background-size: cover;
+  background-position: center;
+  position: relative; }
+  .header__nav {
+    position: absolute;
+    bottom: 48px;
+    left: 0;
+    right: 0; }
+  .header__top {
+    position: absolute;
+    top: 24px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    left: 120px;
+    right: 120px;
+    color: white; }
+  .header__phone {
+    margin-top: 32px; }
+  .header__action {
+    margin-top: 32px; }
+    .header__action .header__link {
+      color: white;
+      text-decoration: none;
+      padding-bottom: 8px;
+      border-bottom: 1px solid white;
+      -webkit-transition: color 300ms, border-bottom 300ms;
+      transition: color 300ms, border-bottom 300ms; }
+      .header__action .header__link:hover {
+        color: #9fadc2;
+        border-bottom: 1px solid #9fadc2; }
+
+html,
+body,
+ul,
+li,
+p {
+  margin: 0;
+  padding: 0; }
+
 body {
-  background: #eee; }
+  background: #eee;
+  font-family: Roboto, sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 12px;
+  line-height: 16px; }
 
 /*# sourceMappingURL=main.css.map */
