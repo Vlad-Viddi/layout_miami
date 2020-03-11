@@ -23,8 +23,7 @@ h1 {
     margin: 0 38px;
     color: white; }
   .nav .nav__item_active {
-    background: #fff;
-    opacity: 0.1;
+    background-color: rgba(255, 255, 255, 0.1);
     border-radius: 8px;
     color: black; }
   .nav__link {
@@ -37,6 +36,7 @@ h1 {
 
 .header {
   height: 700px;
+  max-width: 1260px;
   background-image: url(../images/upd/header-new.png);
   background-size: cover;
   background-position: center;
@@ -77,7 +77,8 @@ html,
 body,
 ul,
 li,
-p {
+p,
+a {
   margin: 0;
   padding: 0; }
 
@@ -86,7 +87,6 @@ body {
   font-family: Roboto, sans-serif;
   font-style: normal;
   font-weight: bold;
-  font-size: 12px;
-  line-height: 16px; }
+  font-size: 12px; }
 
 /*# sourceMappingURL=main.css.map */
