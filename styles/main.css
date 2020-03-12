@@ -26,11 +26,14 @@ body {
   font-family: Roboto, sans-serif;
   font-style: normal;
   font-weight: bold;
-  font-size: 12px;
-  max-width: 1260px; }
+  font-size: 12px; }
 
 .nav {
   text-transform: uppercase; }
+  @media screen and (max-width: 550px) and (min-width: 320px) {
+    .nav {
+      display: none;
+      background-color: #0075ff; } }
   .nav__list {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -46,15 +49,20 @@ body {
         -webkit-box-direction: normal;
             -ms-flex-direction: column;
                 flex-direction: column;
-        -webkit-box-align: center;
-            -ms-flex-align: center;
-                align-items: center; } }
+        -webkit-box-align: start;
+            -ms-flex-align: start;
+                align-items: flex-start;
+        position: relative;
+        top: 100px; } }
   .nav__item {
     padding: 8px 24px;
     color: white; }
-  .nav_active {
-    background-color: rgba(255, 255, 255, 0.1);
-    border-radius: 8px; }
+    .nav__item_active {
+      background-color: rgba(255, 255, 255, 0.1);
+      border-radius: 8px; }
+      @media screen and (max-width: 550px) and (min-width: 320px) {
+        .nav__item_active {
+          background-color: transparent; } }
   .nav__link {
     color: white;
     text-decoration: none;
@@ -62,20 +70,6 @@ body {
     transition: color 300ms, background-color 300ms; }
     .nav__link:hover {
       color: #9fadc2; }
-
-@media screen and (max-width: 550px) and (min-width: 320px) {
-  .nav__list {
-    visibility: hidden;
-    background-color: #0075ff;
-    position: fixed;
-    z-index: 3;
-    height: 100%;
-    top: 0;
-    left: 0;
-    right: 0;
-    margin: 0; }
-  .nav__item_active {
-    background-color: transparent; } }
 
 .header {
   height: 700px;
@@ -124,7 +118,9 @@ body {
     background-image: url(../images/logo.png);
     background-size: contain;
     background-repeat: no-repeat;
-    background-position: center; }
+    background-position: center;
+    position: relative;
+    z-index: 99; }
     @media screen and (max-width: 550px) and (min-width: 320px) {
       .header__logo {
         width: 73px;
@@ -147,17 +143,24 @@ body {
       @media screen and (max-width: 550px) and (min-width: 320px) {
         .header__action .header__link {
           display: none; } }
-    .header__action-hamburger {
+    .header__action .hamburger {
       position: relative; }
-    .header__action .check__hamburger-logo {
+    .header__action .hamburger-logo {
       display: none; }
       @media screen and (max-width: 550px) and (min-width: 320px) {
-        .header__action .check__hamburger-logo {
+        .header__action .hamburger-logo {
           display: block;
           position: absolute;
           bottom: 15px; } }
-    .header__action .check__hamburger-checkbox {
-      display: none; }
+  .header .hamburger-checkbox {
+    display: none; }
+    @media screen and (max-width: 550px) and (min-width: 320px) {
+      .header .hamburger-checkbox:checked + .nav {
+        display: block;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0; } }
   .header__text {
     position: absolute;
     bottom: 165px;
