@@ -8,13 +8,26 @@ h1 {
   font-weight: normal;
   font-style: normal; }
 
-.logo {
-  width: 115px;
-  height: 76px;
-  background-image: url(../images/logo.png);
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center; }
+html,
+body,
+ul,
+li,
+p,
+a {
+  margin: 0;
+  padding: 0; }
+
+html,
+body {
+  height: 100%; }
+
+body {
+  background: #eee;
+  font-family: Roboto, sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 12px;
+  max-width: 1260px; }
 
 .nav {
   text-transform: uppercase; }
@@ -27,10 +40,19 @@ h1 {
             justify-content: space-between;
     list-style: none;
     margin: 0 120px; }
+    @media screen and (max-width: 800px) {
+      .nav__list {
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center; } }
   .nav__item {
     padding: 8px 24px;
     color: white; }
-  .nav .nav__item_active {
+  .nav_active {
     background-color: rgba(255, 255, 255, 0.1);
     border-radius: 8px; }
   .nav__link {
@@ -41,12 +63,27 @@ h1 {
     .nav__link:hover {
       color: #9fadc2; }
 
+@media screen and (max-width: 550px) and (min-width: 320px) {
+  .nav__list {
+    visibility: hidden;
+    background-color: #0075ff;
+    position: fixed;
+    z-index: 3;
+    height: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    margin: 0; }
+  .nav__item_active {
+    background-color: transparent; } }
+
 .header {
   height: 700px;
   background-image: url(../images/upd/header-new.png);
   background-size: cover;
   background-position: center;
-  position: relative; }
+  position: relative;
+  min-width: 320px; }
   .header__nav {
     position: absolute;
     bottom: 48px;
@@ -66,8 +103,37 @@ h1 {
     color: white; }
   .header__phone {
     margin-top: 32px; }
+    @media screen and (max-width: 550px) and (min-width: 320px) {
+      .header__phone {
+        display: none; } }
+  .header__phone-small-screen {
+    display: none;
+    width: 18px;
+    height: 18px;
+    background-image: url(../images/small-screen-phone.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin-top: 15px; }
+    @media screen and (max-width: 550px) and (min-width: 320px) {
+      .header__phone-small-screen {
+        display: block; } }
+  .header__logo {
+    width: 115px;
+    height: 76px;
+    background-image: url(../images/logo.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center; }
+    @media screen and (max-width: 550px) and (min-width: 320px) {
+      .header__logo {
+        width: 73px;
+        height: 48px; } }
   .header__action {
-    margin-top: 32px; }
+    margin-top: 32px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex; }
     .header__action .header__link {
       color: white;
       text-decoration: none;
@@ -78,36 +144,41 @@ h1 {
       .header__action .header__link:hover {
         color: #9fadc2;
         border-bottom: 1px solid #9fadc2; }
-  .header .header__text {
+      @media screen and (max-width: 550px) and (min-width: 320px) {
+        .header__action .header__link {
+          display: none; } }
+    .header__action-hamburger {
+      position: relative; }
+    .header__action .check__hamburger-logo {
+      display: none; }
+      @media screen and (max-width: 550px) and (min-width: 320px) {
+        .header__action .check__hamburger-logo {
+          display: block;
+          position: absolute;
+          bottom: 15px; } }
+    .header__action .check__hamburger-checkbox {
+      display: none; }
+  .header__text {
     position: absolute;
     bottom: 165px;
     left: 120px;
     letter-spacing: -1.5px;
     font-size: 60px;
     color: white; }
-    .header .header__text::before {
+    .header__text::before {
       content: "";
       width: 35px;
       height: 2px;
       background-color: white;
       position: absolute;
       top: -16px; }
-
-html,
-body,
-ul,
-li,
-p,
-a {
-  margin: 0;
-  padding: 0; }
-
-body {
-  background: #eee;
-  font-family: Roboto, sans-serif;
-  font-style: normal;
-  font-weight: bold;
-  font-size: 12px;
-  max-width: 1260px; }
+    @media screen and (max-width: 800px) {
+      .header__text {
+        position: absolute;
+        bottom: 300px; } }
+    @media screen and (max-width: 550px) and (min-width: 320px) {
+      .header__text {
+        bottom: 80px;
+        left: 20px; } }
 
 /*# sourceMappingURL=main.css.map */
