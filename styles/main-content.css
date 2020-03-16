@@ -126,7 +126,8 @@
         background: linear-gradient(45deg, #0075ff, #99d6c7); }
       @media screen and (max-width: 768px) {
         .container .gallery .btn-wrapper .photo__btn {
-          width: calc(100vw - 40px);
+          width: 100%;
+          max-width: 413px;
           margin-bottom: 48px; } }
   .container .consultation__header {
     font-size: 48px;
@@ -180,12 +181,15 @@
     width: 100%;
     max-width: 413px;
     height: 48px;
+    padding: 17px;
     margin-bottom: 16px;
     border: 1px solid transparent;
     border-radius: 8px;
     background-color: #f6f8ff;
     color: #b9c1ce;
-    font-size: 14px; }
+    font-size: 14px;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box; }
   .container .consultation__form-btn {
     font-family: Roboto, sans-serif;
     font-style: normal;
@@ -282,16 +286,25 @@
   .container .contact__wrap {
     display: grid;
     grid-template-columns: 1fr 1fr 2fr;
-    -webkit-box-pack: end;
-        -ms-flex-pack: end;
-            justify-content: end; }
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-column-gap: 5px;
+       -moz-column-gap: 5px;
+            column-gap: 5px; }
     @media screen and (max-width: 768px) {
       .container .contact__wrap {
-        grid-template-columns: 1fr; } }
+        grid-template-columns: 1fr;
+        -webkit-box-pack: center;
+            -ms-flex-pack: center;
+                justify-content: center; } }
     .container .contact__wrap .phone-email,
     .container .contact__wrap address {
       max-width: 152px;
-      margin-bottom: 24px; }
+      margin-right: 20px; }
+    @media screen and (max-width: 768px) {
+      .container .contact__wrap .address {
+        margin-top: 24px; } }
     .container .contact__wrap .contact-info {
       font-size: 14px;
       line-height: 27px;
@@ -306,16 +319,24 @@
         line-height: 27px;
         color: #3e3e3e;
         max-width: 152px; }
+      .container .contact__wrap .contact-info_email {
+        margin-top: 24px; }
+    @media screen and (max-width: 768px) {
+      .container .contact__wrap .contact__form .form {
+        justify-self: center; } }
     .container .contact__wrap .contact__form .form-input {
       width: 100%;
       max-width: 413px;
       height: 48px;
+      padding: 17px;
       margin-bottom: 16px;
       border: 1px solid transparent;
       border-radius: 8px;
       background-color: #f6f8ff;
       color: #b9c1ce;
-      font-size: 14px; }
+      font-size: 14px;
+      -webkit-box-sizing: border-box;
+              box-sizing: border-box; }
     .container .contact__wrap .contact__form .form-textarea {
       height: 144px;
       -webkit-box-sizing: border-box;
