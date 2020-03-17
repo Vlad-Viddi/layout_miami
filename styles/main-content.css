@@ -367,7 +367,8 @@
           height: 144px;
           -webkit-box-sizing: border-box;
                   box-sizing: border-box;
-          float: right; }
+          float: right;
+          resize: none; }
         .container .contact__wrap .contact__form .form-btn {
           font-family: Roboto, sans-serif;
           font-style: normal;
